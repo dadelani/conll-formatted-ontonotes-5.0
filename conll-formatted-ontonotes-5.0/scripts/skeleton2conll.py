@@ -417,7 +417,7 @@ def parse_sexpr(s):
 def unparse_sexpr(l):
     if type(l) == type([]):
         return "(" + " ".join(unparse_sexpr(a) for a in l) + ")"
-    return l.encode('uft-8')
+    return l.encode('utf-8')
 
 
 
