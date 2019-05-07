@@ -26,7 +26,7 @@ def remove_edited_subtree(input_fname, output_fname):
 
     with codecs.open(output_fname, 'w', 'utf8') as outf:
         for a_tree in edited_trees:
-            outf.write(skeleton2conll.pretty_print_tree_string(a_tree) + '\n')
+            outf.write(skeleton2conll.pretty_print_tree_string(a_tree).decode('utf-8') + '\n')
 
 if __name__ == '__main__':
     assert len(sys.argv) == 3
